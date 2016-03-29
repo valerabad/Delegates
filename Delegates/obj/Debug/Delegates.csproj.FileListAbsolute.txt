@@ -4,3 +4,9 @@ C:\Users\HP\Desktop\Course\Delegates\Delegates\bin\Debug\Delegates.pdb
 C:\Users\HP\Desktop\Course\Delegates\Delegates\obj\Debug\Delegates.csprojResolveAssemblyReference.cache
 C:\Users\HP\Desktop\Course\Delegates\Delegates\obj\Debug\Delegates.exe
 C:\Users\HP\Desktop\Course\Delegates\Delegates\obj\Debug\Delegates.pdb
+C:\Users\HP\Documents\GitHub\Delegates\Delegates\bin\Debug\Delegates.exe.config
+C:\Users\HP\Documents\GitHub\Delegates\Delegates\obj\Debug\Delegates.exe
+C:\Users\HP\Documents\GitHub\Delegates\Delegates\obj\Debug\Delegates.pdb
+C:\Users\HP\Documents\GitHub\Delegates\Delegates\obj\Debug\Delegates.csprojResolveAssemblyReference.cache
+C:\Users\HP\Documents\GitHub\Delegates\Delegates\bin\Debug\Delegates.exe
+C:\Users\HP\Documents\GitHub\Delegates\Delegates\bin\Debug\Delegates.pdb

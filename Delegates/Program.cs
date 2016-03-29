@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace Delegates
 {
-    delegate double AverageDelegate(int arg1, int arg2, int arg3);
-    delegate int LengthLogin(string s);
-    delegate bool BoolPassword(string s1, string s2);
+    delegate double AverageDelegate(int arg1, int arg2, int arg3);        
     delegate double Operations(double a, double b);
 
+    delegate int myDel();
+    delegate double AverageMassivDel(myDel[] value);
+    
+
     partial class Program
-    {                
+    {           
         static void Main(string[] args)
         {
             Console.WriteLine("Enter task:");
@@ -20,24 +22,26 @@ namespace Delegates
             int.TryParse(Console.ReadLine(), out task);
             switch (task)
             {
+                //1 task
                 case 1:
                     AverageDelegate average = CodeBlock();
-                    Console.WriteLine(average(10,12,14));
-                    Console.WriteLine(average(1, 15, 15));
+                    Console.WriteLine("Average: {0}", average(10,12,14));
+                    Console.WriteLine("Average: {0}", average(1, 15, 15));
                     break;
+                //2 task
                 case 2:                                        
                     double a = 10, b=12;                    
 
                     Operations Add = (v1, v2) => v1 + v2;
-                    Console.WriteLine( Add(a,b));
+                    Console.WriteLine("Sum: {0}", Add(a,b));
 
-                    Add = (v1, v2) => v1 - v2;
-                    Console.WriteLine(Add(a, b));
+                    Operations Sub = (v1, v2) => v1 - v2;
+                    Console.WriteLine("Sub: {0}", Sub(a, b));
 
-                    Add = (v1, v2) => v1 * v2;
-                    Console.WriteLine(Add(a, b));
+                    Operations Mul = (v1, v2) => v1 * v2;
+                    Console.WriteLine("Mul: {0}", Mul(a, b));
 
-                    Add = (v1, v2) =>
+                    Operations Div = (v1, v2) =>
                         {
                             if (v2 != 0)
                                 return v1 / v2;
@@ -47,10 +51,19 @@ namespace Delegates
                                 return -1;
                             }
                         };
-                    Console.WriteLine(Add(a, b));
+                    Console.WriteLine("Div: {0}", Div(a, b));
                     
                     break;
-                case 3:
+                //3 task
+                case 3:                    
+                    myDel[] massivDelegates = new myDel[3];
+                    massivDelegates[0] = new myDel(RandomValue1);
+                    massivDelegates[1] = new myDel(RandomValue2);
+                    massivDelegates[2] = new myDel(RandomValue3);
+
+                    AverageMassivDel averageMas = AverageMasiv();
+                    Console.WriteLine("Average: {0}", averageMas(massivDelegates));
+
                     break;
             }            
             Console.ReadKey();
